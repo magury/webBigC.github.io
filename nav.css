@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 一级 */
+.nav>ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav .nav-litem {
+    position: relative;
+    flex: 0 0 33.3%;
+}
+
+.nav .nav-litem>a {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    background-color: black;
+    display: block;
+    line-height: 50px;
+    transition: .3s;
+}
+
+.nav .nav-litem>a:hover {
+    background-color: rgb(218, 141, 0);
+}
+
+/* 二级菜单 */
+.nav .nav-litem>ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    transition: all .3s;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    background-color: orange;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav .nav-litem>ul>li:hover {
+    background-color: red;
+}
+
+.nav .nav-litem>ul>li>a {
+    line-height: 30px;
+    display: block;
+    color: rgb(100, 100, 100);
+}
+
+/* 第一种：下拉 */
+.nav .nav-litem:nth-child(1)>ul {
+    padding: 0;
+    overflow: hidden;
+    height: 0px;
+    visibility: visible;
+}
+
+.nav .nav-litem:nth-child(1):hover>ul {
+    height: 78px;
+    padding: 8px 0;
+}
+
+/* 第二种：上移 */
+.nav .nav-litem:nth-child(2)>ul {
+    top: 150%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav .nav-litem:nth-child(2):hover>ul {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 第三种：淡出 */
+.nav .nav-litem:nth-child(3)>ul {
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav .nav-litem:nth-child(3):hover>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 第四种：左移 */
+.nav .nav-litem:nth-child(4)>ul {
+    left: -20%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav .nav-litem:nth-child(4):hover>ul {
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 第五种：翻转 */
+.nav .nav-litem:nth-child(5)>ul {
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    transform: perspective(600px) rotateX(-90deg);
+}
+
+.nav .nav-litem:nth-child(5):hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+.div {
+	height: 500px;
+	width: 100%;
+	text-align:center;
+	font-size:36px;
+	
+}
+.div1 {
+	height: 100px;
+	width: 100%;
+	text-align:center;	
+	
+}
+.div table tr th {
+	font-size: 24px;
+}
+.div table tr td {
+	font-size: 24px;
+}
